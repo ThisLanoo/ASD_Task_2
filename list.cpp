@@ -1,3 +1,4 @@
+
 #include "list.h"
 
 void createList(List &L) {
@@ -64,7 +65,8 @@ void insertLast(List &L, address P) {
         next(Q) = P;
     }
 
-    //----------------------------------------
+        next(Q) = P;
+    }
 }
 
 address findElm(List L, infotype x) {
@@ -81,8 +83,10 @@ address findElm(List L, infotype x) {
         P = next(P);
     }
 
-    //----------------------------------------
-    return P;
+        P = next(P);
+    }
+
+    return NULL;
 }
 
 void deleteFirst(List &L, address &P) {
@@ -144,7 +148,6 @@ void printInfo(List L) {
     cout<<endl;
 }
 
-
 void insertAfter(List &L, address Prec, address P) {
     /**
     * IS : Prec and P is not NULL
@@ -158,6 +161,7 @@ void insertAfter(List &L, address Prec, address P) {
     //----------------------------------------
 
 }
+
 void deleteAfter(List &L, address Prec, address &P) {
     /**
     * IS : Prec is not NULL
@@ -173,4 +177,3 @@ void deleteAfter(List &L, address Prec, address &P) {
 
     //----------------------------------------
 }
-
